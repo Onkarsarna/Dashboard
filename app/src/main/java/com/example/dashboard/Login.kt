@@ -3,6 +3,8 @@ package com.example.dashboard
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
@@ -12,10 +14,13 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        supportActionBar?.hide()
+
+        supportActionBar?.hide();
         this.getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
+
     }
 
      private fun dataCheck() {
@@ -30,8 +35,8 @@ class Login : AppCompatActivity() {
     }
 
    private fun credCheck(){
-        val userName ="Demo@gmail.com"
-        val password = "Hello@123"
+        val userName ="1"
+        val password = "1"
         val email =loginInput.editableText.toString()
         val pass= pswdInput.editableText.toString()
         if(email.equals(userName, ignoreCase = true) && pass ==password )
@@ -55,4 +60,5 @@ class Login : AppCompatActivity() {
         dataCheck()
         credCheck()
     }
-}
+
+    }
